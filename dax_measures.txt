@@ -1,0 +1,4 @@
+Revenue := SUM(fact_sales[revenue])
+COGS := SUM(fact_sales[cogs])
+Gross Profit := [Revenue]-[COGS]
+GM % := DIVIDE([Gross Profit],[Revenue])

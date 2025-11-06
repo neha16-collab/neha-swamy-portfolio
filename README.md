@@ -1,0 +1,3 @@
+- KPIs: Default %, Avg FICO, Collateral %, Avg Rate
+- Vintage chart by origination_month
+- Heatmap: Segment × Region default rate

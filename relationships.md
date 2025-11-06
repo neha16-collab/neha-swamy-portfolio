@@ -1,0 +1,1 @@
+- fact_sales -> dim_date, dim_customer, dim_product

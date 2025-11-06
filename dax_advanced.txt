@@ -1,0 +1,1 @@
+Rev 3M Rolling := CALCULATE([Revenue], DATESINPERIOD('dim_date'[date], MAX('dim_date'[date]), -3, MONTH))

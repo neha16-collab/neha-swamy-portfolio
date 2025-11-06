@@ -1,0 +1,1 @@
+SELECT d.year, d.month, SUM(f.revenue) AS revenue, SUM(f.gross_profit) AS gp FROM fact_sales f JOIN dim_date d ON d.date=f.date GROUP BY d.year,d.month;

@@ -1,0 +1,4 @@
+- Cards: Revenue, GP, GM%
+- Line: Monthly Revenue
+- Bar: Top Products
+- Slicers: Year, Region, Category
