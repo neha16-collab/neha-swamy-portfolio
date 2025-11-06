@@ -1,13 +1,73 @@
-<!doctype html><html><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Advanced BI — Semantic Model & RLS</title>
-<style>body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}a{color:#1a73e8;text-decoration:none}a:hover{text-decoration:underline}code,pre{background:#f6f8fa;border:1px solid #e5e7eb;border-radius:8px;padding:12px;display:block;overflow:auto}</style>
-</head><body>
-<h1>Advanced BI — Semantic Model & Row-Level Security (Power BI)</h1>
-<p>DAX patterns (rolling windows, segmentation) and an RLS design using a user→region security table.</p>
-<ul>
-  <li><a href="../../relationships.md">Model Relationships</a></li>
-  <li><a href="../../dax_advanced.txt">Advanced DAX</a></li>
-</ul>
-<p><a href="../../index.html">← Back to Home</a></p>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Advanced BI — Calc Groups, Parameters, RLS</title>
+  <meta name="description" content="Advanced Power BI techniques: calculation groups, field/what-if parameters, role-level security, and bookmark-driven UX.">
+  <link rel="stylesheet" href="../_shared/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">Your Name — Data Analytics</div>
+      <div class="small"><a href="/neha-swamy-portfolio/">Home</a></div>
+    </div>
+
+    <div class="card">
+      <h1>Advanced BI (Power BI) — Calc Groups, Parameters, RLS</h1>
+      <p>Deep-dive build focused on Power BI modeling & UX patterns: <b>calculation groups</b> for time intelligence, <b>field/what-if parameters</b> for dynamic analysis, <b>RLS</b> for secure multi-tenant views, and <b>bookmarks</b> for guided stories.</p>
+      <div class="btns">
+        <a class="btn" href="https://github.com/&lt;your-username&gt;/&lt;your-repo&gt;" target="_blank" rel="noreferrer">View Repo</a>
+        <a class="btn" href="https://github.com/&lt;your-username&gt;/&lt;your-repo&gt;/releases" target="_blank" rel="noreferrer">Download PBIX</a>
+        <a class="btn" href="https://github.com/&lt;your-username&gt;/&lt;your-repo&gt;/raw/main/docs/advanced-bi-case-study.pdf" target="_blank" rel="noreferrer">PDF Case Study</a>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:16px">
+      <div class="card kpis">
+        <h2>Business Questions</h2>
+        <ul>
+          <li>How do KPIs change across time grains (MTD/QTD/YTD/R12) without duplicating measures?</li>
+          <li>Can analysts pivot dimensions on the fly (field parameters) for ad-hoc exploration?</li>
+          <li>How do we keep data secure per user (RLS) while preserving performance?</li>
+        </ul>
+
+        <h2>Data & Model</h2>
+        <p>Star schema with a robust Date table. Calculation group for time intelligence; disconnected tables for parameters and what-if scenarios. Roles for RLS.</p>
+        <div class="code">
+Measures (examples):<br>
+• Total Amount := SUM(fact_finance[amount])<br>
+• Amount YTD := TOTALYTD([Total Amount], 'dim_date'[full_date])<br>
+• Amount R12 := CALCULATE([Total Amount], DATESINPERIOD('dim_date'[full_date], MAX('dim_date'[full_date]), -12, MONTH))
+        </div>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li><b>Calculation Groups</b> for dynamic MTD/QTD/YTD/R12 without measure explosion</li>
+          <li><b>Field & What-If Parameters</b> to swap axes/measures and run scenario analysis</li>
+          <li><b>RLS</b> by entity/region for secure, personalized dashboards</li>
+          <li><b>Bookmarks</b> to create guided stories and toggle views</li>
+        </ul>
+
+        <h2>Insights & Outcomes</h2>
+        <ul>
+          <li>Reduced maintenance (single measure logic reused via calc groups)</li>
+          <li>Self-service analytics with safe guardrails</li>
+          <li>Security-compliant distribution to multiple stakeholders</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Screenshots</h2>
+        <p class="small">Replace these images with your actual Advanced BI dashboard & model.</p>
+        <img class="screenshot" src="../_shared/placeholder.png" alt="Advanced BI dashboard screenshot">
+        <h2 style="margin-top:18px">Model Diagram</h2>
+        <img class="screenshot" src="../_shared/model.png" alt="Data model diagram">
+      </div>
+    </div>
+
+    <div class="footer">© 2025 · Data Analytics Portfolio</div>
+  </div>
+</body>
+</html>
