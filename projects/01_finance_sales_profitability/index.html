@@ -1,63 +1,49 @@
 <h1>Finance Sales & Profitability (SQL • Python • Power BI)</h1>
 
-<p>
-Star schema (Sales, Products, Customers, Calendar). KPIs: Revenue, Gross Margin %, Average Selling Price (ASP),
-Year-over-Year growth, and Last-3-Months performance. Python EDA for outliers & seasonality. Power BI with
-drill-through from Country → Region → Customer → Product.
-</p>
+<p>Star schema (Sales, Products, Customers, Calendar)...</p>
 
 <ul>
-  <li><b>SQL:</b> Common Table Expressions (CTEs) for time-intelligence and gross margin calculations.</li>
-  <li><b>Python:</b> Pandas-based EDA, monthly trend checks, and sanity checks on revenue & cost distributions.</li>
-  <li><b>BI:</b> Power BI report with bookmarks, tooltip pages, and a robust Date table powered by DAX.</li>
+  <li><b>SQL:</b> ...</li>
+  <li><b>Python:</b> ...</li>
+  <li><b>BI:</b> ...</li>
 </ul>
 
-<img src="Finance_Dashboard.png" alt="Finance Dashboard" width="100%">
-
-<p><em>Sales & profitability dashboard showing revenue, cost, profit margin, regional trends, and top-performing products.</em></p>
+<img src="Finance_Dashboard.png" ...>
+<p><em>Dashboard caption...</em></p>
 
 <h2>Business Problem</h2>
 <p>
-The regional finance team needed a unified, trusted view of revenue, gross margin %, and product mix to replace
-multiple Excel files and manual slide decks. The goal was to quickly answer: “Which regions and products drive
-profitability over time, and where are we losing margin?”
+Regional finance team needed a unified view of revenue, gross margin %, and product mix
+to replace multiple Excel files and manual reporting...
 </p>
 
 <h2>Data</h2>
 <ul>
-  <li>Sales fact table: ~250k rows over 3 years, one row per invoice line.</li>
-  <li>Dimensions: Products, Customers, Calendar (role-playing dates for Order Date and Ship Date).</li>
-  <li>Source: CSV exports simulating ERP extracts, cleaned and validated with Python & SQL before loading into BI.</li>
+  <li>Sales fact table: ~250k rows over 3 years...</li>
+  <li>Dimensions: Products, Customers...</li>
+  <li>Source: CSV exports...</li>
 </ul>
 
 <h2>Solution</h2>
 <ul>
-  <li>Modeled a star schema with a reusable Date dimension and conformed dimensions for Products and Customers.</li>
-  <li>Wrote SQL to compute base metrics (net sales, discounts, cost of goods) and staged them into reporting tables.</li>
-  <li>Used Python (Pandas) to validate aggregate totals, check monthly seasonality, and detect outlier transactions before reporting.</li>
-  <li>Built a Power BI report with drill-through from Region → Customer → Product, and DAX time-intelligence for MTD/QTD/YTD and YoY comparisons.</li>
+  <li>Modeled a star schema...</li>
+  <li>SQL to compute base metrics...</li>
+  <li>Used Python Pandas...</li>
+  <li>Power BI drill-through...</li>
 </ul>
 
 <h2>Key Insights</h2>
 <ul>
-  <li>Identified that ~15% of SKUs contributed close to 70% of revenue (classic Pareto pattern), guiding focus for promotions and stock planning.</li>
-  <li>Found two regions with strong revenue but weak gross margins due to heavy discounting and freight costs.</li>
-  <li>Created a reusable Date table and core KPI measures that can be plugged into future finance and sales reports.</li>
+  <li>15% of SKUs contributed 70% revenue...</li>
+  <li>Two regions low margin...</li>
+  <li>Date table reused...</li>
 </ul>
 
 <h2>Deliverables</h2>
 <ul>
-  <li><b>SQL scripts:</b> Staging logic and KPI calculation queries for revenue, margin, and ASP.</li>
-  <li><b>Python notebook:</b> EDA notebook for validation, seasonal trend checks, and outlier detection.</li>
-  <li><b>Power BI report (PBIX) or screenshots:</b> Final interactive dashboard with drill-through and tooltips.</li>
-</ul>
-
-<h2>If This Were in Production</h2>
-<ul>
-  <li>Schedule automated refreshes (daily/weekly) via an ETL/ELT pipeline with data quality checks.</li>
-  <li>Add row-level security (RLS) so regional managers only see their markets.</li>
-  <li>Instrument usage metrics to see which pages and filters are most used by stakeholders.</li>
+  <li><b>SQL scripts:</b> Staging and KPI queries.</li>
+  <li><b>Python notebook:</b> EDA.</li>
+  <li><b>Power BI report:</b> Dashboard screenshots.</li>
 </ul>
 
 <a href="/neha-swamy-portfolio/">← Back to Home</a>
-
