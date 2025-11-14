@@ -7,4 +7,46 @@
 </ul>
 <img src="Advanced_BI_Dashboard.png" alt="Advanced BI Dashboard" width="100%">
 <p><em>Advanced BI dashboard showcasing semantic model behavior, time-intelligence patterns via calculation groups, and region-based role-level security views.</em></p>
+<h2>Business Problem</h2>
+<p>
+Multiple teams needed consistent KPIs across reports (sales, finance, operations), but each workbook was
+defining calculations slightly differently. There was also a need to restrict data access based on region
+and management hierarchy without creating separate reports for each audience.
+</p>
+
+<h2>Data</h2>
+<ul>
+  <li>Fact tables for orders and shipments, each with its own date fields and related dimensions.</li>
+  <li>Shared dimensions for Customers, Products, and a central Date table.</li>
+  <li>User attributes such as Region and Manager used to drive row-level security rules.</li>
+</ul>
+
+<h2>Solution</h2>
+<ul>
+  <li>Designed a reusable semantic model with a single Date dimension acting as a role-playing date for both Order and Ship dates.</li>
+  <li>Implemented a calculation group to standardize time-intelligence patterns (MTD, QTD, YTD, rolling periods, YoY comparisons).</li>
+  <li>Defined Row-Level Security (RLS) roles that filter data by Region and Manager, ensuring users see only their relevant slice of data.</li>
+  <li>Documented a measures catalogue and table-level descriptions so future reports can plug into the same model.</li>
+</ul>
+
+<h2>Key Insights</h2>
+<ul>
+  <li>Semantic consistency eliminated differences in how core KPIs (revenue, margin, volume) were calculated across reports.</li>
+  <li>RLS allowed a single report to serve many audiences – executives, regional managers, and analysts – without duplicating logic.</li>
+  <li>Calculation groups reduced the number of DAX measures and made it easier to add new time-based views.</li>
+</ul>
+
+<h2>Deliverables</h2>
+<ul>
+  <li><b>PBIX model file:</b> Semantic model with tables, relationships, and calculation group.</li>
+  <li><b>RLS roles:</b> Defined security roles by Region and Manager for controlled access.</li>
+  <li><b>Documentation:</b> Measures catalogue, model diagram, and RLS design notes.</li>
+</ul>
+
+<h2>If This Were in Production</h2>
+<ul>
+  <li>Host the model in a centralized workspace as a shared dataset for multiple reports.</li>
+  <li>Integrate with Azure AD security groups for automated user-to-role assignment.</li>
+  <li>Version and test changes to measures and roles before promoting to production.</li>
+</ul>
 <a href="/neha-swamy-portfolio/">← Back to Home</a>
