@@ -1,49 +1,130 @@
-<!doctype html><html lang='en'><head>
-<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Neha Swamy Portfolio</title>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neha Swamy — Data Analyst Portfolio</title>
+
 <style>
   body {
+    margin: 0;
+    padding: 0;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: "Segoe UI", Arial, sans-serif;
     color: white;
-    font-family: Arial, sans-serif;
   }
-  h1, h2, h3 {
-    color: #ffffff;
+
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 42px;
+    color: #ffe066;
+    text-shadow: 0 0 10px #00000050;
   }
-  a {
-    color: #ffd369;
-    font-weight: bold;
+
+  .center {
+    text-align: center;
   }
+
+  .tools img {
+    margin: 6px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .container {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
   .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    backdrop-filter: blur(6px);
-    color: white;
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    transition: transform 0.2s ease, background 0.3s ease;
   }
-</style></head><body><div class='wrap'>
-<div class='tag'>Power BI · SQL · Python · Excel · Tableau</div>
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .project-card h2 {
+    margin-top: 0;
+    color: #ffe066;
+  }
+
+  .project-card a {
+    color: #ffd43b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin: 40px 0;
+    color: #ffec99;
+    opacity: 0.8;
+  }
+</style>
+</head>
+
+<body>
+
 <h1>Neha Swamy — Data Analyst Portfolio</h1>
-<p>Finance Analytics & Advanced BI. Hands-on projects with datasets, SQL, Python notebooks, and dashboard specs.</p>
-<div class='grid'>
-<div class='card'><h3>1) Finance Sales & Profitability</h3>
-<p>Star schema, SQL KPIs, Python EDA, DAX & Power BI visuals.</p>
-<a href="projects/01_finance_sales_profitability/index.html">Open project →</a></div>
 
-<div class='card'><h3>2) Credit Risk & Loan Portfolio</h3>
-<p>EDA + baseline model + Tableau views.</p>
-<a href="projects/02_credit_risk_portfolio/index.html">Open project →</a></div>
+<!-- TOOL ICONS -->
+<div class="center tools">
+  <img src="https://img.icons8.com/color/48/power-bi.png" />
+  <img src="https://img.icons8.com/color/48/sql.png" />
+  <img src="https://img.icons8.com/color/48/python.png" />
+  <img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" />
+  <img src="https://img.icons8.com/color/48/tableau-software.png" />
+</div>
 
-<div class='card'><h3>3) Advanced BI — Semantic Model & RLS</h3>
-<p>Advanced DAX, calc patterns, Row-Level Security.</p>
-<a href="projects/03_advanced_bi/index.html">Open project →</a></div>
+<div class="container">
 
-<div class='card'><h3>4) Comparative BI: Power BI vs Tableau</h3>
-<p>Same dashboard in both tools.</p>
-<a href="projects/04_bi_comparative/index.html">Open project →</a></div>
+  <!-- Project 1 -->
+  <div class="project-card">
+    <h2>Finance Sales & Profitability</h2>
+    <p>Revenue, profit margins, ASP, YoY growth analysis using SQL, Python, and Power BI. Includes drill-through reporting and KPI scorecards.</p>
+    <a href="/neha-swamy-portfolio/projects/01_finance_sales_profitability/">→ View Project</a>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-card">
+    <h2>Credit Risk & Loan Portfolio</h2>
+    <p>Loan default modeling using logistic regression, WoE/IV feature analysis, and Tableau cohort risk dashboard.</p>
+    <a href="/neha-swamy-portfolio/projects/02_credit_risk_portfolio/">→ View Project</a>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-card">
+    <h2>Advanced BI — Semantic Model & RLS</h2>
+    <p>Dynamic calculation groups (MTD/QTD/YTD), conformed dimensions, and RLS implementation for enterprise analytics.</p>
+    <a href="/neha-swamy-portfolio/projects/03_advanced_bi/">→ View Project</a>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="project-card">
+    <h2>Comparative BI — Power BI vs Tableau</h2>
+    <p>Side-by-side comparison of dashboard development in Power BI vs Tableau with performance and UX evaluation.</p>
+    <a href="/neha-swamy-portfolio/projects/04_bi_comparative/">→ View Project</a>
+  </div>
 
 </div>
-<footer><p>Contact: <a href="mailto:201nehanv@gmail.com">201nehanv@gmail.com</a></p></footer>
-</div></body></html>
+
+<footer>
+  © 2025 · Built with ❤️ using HTML, CSS & GitHub Pages
+</footer>
+
+</body>
+</html>
