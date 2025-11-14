@@ -1,11 +1,42 @@
-<h1>Credit Risk & Loan Portfolio (EDA • Baseline Model • Tableau)</h1>
-<p>Explored delinquency, charge-off drivers across FICO bands, DTI, LTV, utilization. Built a baseline logistic model for default probability and published a Tableau dashboard for cohort risk.</p>
+<h2>Business Problem</h2>
+<p>
+A lending team wanted to understand which segments of their loan portfolio carry the highest risk of default,
+and how risk varies across FICO bands, DTI, LTV, utilization, and product type. The objective was to identify
+high-risk pockets and support more informed credit policy decisions.
+</p>
+
+<h2>Data</h2>
 <ul>
-  <li><b>EDA:</b> WoE/IV for top features</li>
-  <li><b>Model:</b> Logistic baseline; ROC/AUC & calibration</li>
-  <li><b>BI:</b> Tableau cohort analysis & risk heatmaps</li>
+  <li>Loan-level dataset with features such as FICO score, DTI, LTV, utilization, product type, term, and status.</li>
+  <li>Target variable indicating default / non-default or charge-off state.</li>
+  <li>Historical observation window representing origination and subsequent performance over time.</li>
 </ul>
-<!-- Replace with your own images or an iframe embed (see section below) -->
-<img src="Credit_Risk_Dashboard.png" alt="Credit Risk Dashboard" width="100%">
-<p><em>Credit risk dashboard showing loan distribution, default rates by segment, credit score bands, and cohort-level risk indicators.</em></p>
-<a href="/neha-swamy-portfolio/">← Back to Home</a>
+
+<h2>Solution</h2>
+<ul>
+  <li>Performed EDA to understand distributions, missingness, and correlations between risk drivers and default.</li>
+  <li>Used Weight of Evidence (WoE) / Information Value (IV) to evaluate the predictive strength of key variables.</li>
+  <li>Built a baseline logistic regression model to estimate default probability at the loan level.</li>
+  <li>Segmented the portfolio into risk bands and visualized the results using Tableau cohort and heatmap views.</li>
+</ul>
+
+<h2>Key Insights</h2>
+<ul>
+  <li>Higher default rates were concentrated in low FICO bands with high utilization and higher DTI buckets.</li>
+  <li>Some product types showed elevated risk despite apparently reasonable FICO, suggesting pricing or policy review.</li>
+  <li>Clear risk tiers emerged that could be translated into policy rules, such as stricter limits or enhanced monitoring.</li>
+</ul>
+
+<h2>Deliverables</h2>
+<ul>
+  <li><b>EDA notebook:</b> Exploratory analysis of portfolio behavior and risk factors.</li>
+  <li><b>Model artifacts:</b> Baseline logistic regression, coefficients, and evaluation metrics (ROC/AUC, calibration).</li>
+  <li><b>Tableau dashboard:</b> Visual views of risk distribution, cohorts, and segment-level performance.</li>
+</ul>
+
+<h2>If This Were in Production</h2>
+<ul>
+  <li>Integrate model scores into the loan decisioning process for pre-approval or pricing suggestions.</li>
+  <li>Monitor model performance over time for drift and recalibration needs.</li>
+  <li>Expose key risk KPIs via dashboards to credit, risk, and collections teams.</li>
+</ul>
